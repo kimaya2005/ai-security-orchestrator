@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login History</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:white;
+            text-align:center;
+            margin:0;
+            padding-bottom:40px;
+        }
+
+        h2{
+            margin-top:30px;
+        }
+
+        .table-container{
+            width:92%;
+            margin:auto;
+            margin-top:30px;
+            overflow-x:auto;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:#1c1c1c;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        th, td{
+            padding:12px;
+            border-bottom:1px solid #333;
+            font-size:14px;
+        }
+
+        th{
+            background:#111;
+            color:#00ffcc;
+            letter-spacing:1px;
+        }
+
+        tr:hover{
+            background:#2a2a2a;
+        }
+
+        .safe{
+            color:#00ffcc;
+            font-weight:bold;
+        }
+
+        .otp{
+            color:#ffd166;
+            font-weight:bold;
+        }
+
+        .blocked{
+            color:#ff4d4d;
+            font-weight:bold;
+        }
+
+        .summary{
+            margin-top:15px;
+            color:#ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🔐 Login Security History</h2>
+<p class="summary">System tracks login behaviour & detects anomalies</p>
+
+<div class="table-container">
+<table>
+<tr>
+    <th>Login Time</th>
+    <th>IP Address</th>
+    <th>Device</th>
+    <th>Status</th>
+</tr>
+
+{% for log in logs %}
+<tr>
+    <td>{{log[0]}}</td>
+    <td>{{log[1]}}</td>
+    <td>{{log[2]}}</td>
+    <td>
+        {% if log[3] == "SAFE_LOGIN" %}
+            <span class="safe">SAFE</span>
+        {% elif log[3] == "OTP_REQUIRED" %}
+            <span class="otp">OTP REQUIRED</span>
+        {% elif log[3] == "BLOCKED" %}
+            <span class="blocked">BLOCKED</span>
+        {% else %}
+            {{log[3]}}
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Secure Login</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#141e30,#243b55);
+            color:white;
+        }
+
+        .login-box{
+            background:#1c1c1c;
+            padding:40px;
+            border-radius:12px;
+            width:320px;
+            text-align:center;
+            box-shadow:0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        h2{
+            margin-bottom:20px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:none;
+            border-radius:6px;
+            outline:none;
+            background:#333;
+            color:white;
+            font-size:14px;
+        }
+
+        input::placeholder{
+            color:#bbb;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            border:none;
+            border-radius:6px;
+            background:#00ffcc;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#00e6b8;
+        }
+
+        .footer{
+            margin-top:15px;
+            font-size:12px;
+            color:#aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>🔐 AI Secure Login</h2>
+
+    <form method="POST" action="/">
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login Securely</button>
+    </form>
+
+    <div class="footer">
+        Behaviour monitoring & anomaly detection enabled
+    </div>
+</div>
+
+</body>
+</html>

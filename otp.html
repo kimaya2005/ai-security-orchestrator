@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:white;
+        }
+
+        .otp-box{
+            background:#1c1c1c;
+            padding:40px;
+            border-radius:12px;
+            width:320px;
+            text-align:center;
+            box-shadow:0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        h2{
+            margin-bottom:10px;
+        }
+
+        p{
+            font-size:14px;
+            color:#bbb;
+            margin-bottom:20px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            border:none;
+            border-radius:6px;
+            outline:none;
+            background:#333;
+            color:white;
+            font-size:18px;
+            text-align:center;
+            letter-spacing:4px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            border:none;
+            border-radius:6px;
+            background:#00ffcc;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#00e6b8;
+        }
+
+        .timer{
+            margin-top:10px;
+            font-size:12px;
+            color:#aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="otp-box">
+    <h2>🔐 OTP Verification</h2>
+    <p>Enter the OTP for secure login</p>
+
+    <form method="POST">
+        <input name="otp" placeholder="----" maxlength="4" required>
+        <button type="submit">Verify OTP</button>
+    </form>
+
+    <div class="timer">
+        OTP expires in 60 seconds
+    </div>
+</div>
+
+</body>
+</html>

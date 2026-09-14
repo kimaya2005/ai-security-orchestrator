@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Time Analysis</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:white;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        h2{
+            margin-bottom:30px;
+        }
+
+        .container{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:#1c1c1c;
+            padding:25px;
+            border-radius:12px;
+            width:180px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.4);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.6);
+        }
+
+        .icon{
+            font-size:35px;
+            margin-bottom:10px;
+        }
+
+        .count{
+            font-size:28px;
+            font-weight:bold;
+            margin-top:5px;
+        }
+
+        .label{
+            color:#bbb;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📊 Login Behaviour Analysis</h2>
+
+<div class="container">
+
+    <div class="card">
+        <div class="icon">🌅</div>
+        <div class="count">{{morning}}</div>
+        <div class="label">Morning Logins</div>
+    </div>
+
+    <div class="card">
+        <div class="icon">☀</div>
+        <div class="count">{{afternoon}}</div>
+        <div class="label">Afternoon Logins</div>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌇</div>
+        <div class="count">{{evening}}</div>
+        <div class="label">Evening Logins</div>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌙</div>
+        <div class="count">{{night}}</div>
+        <div class="label">Night Logins</div>
+    </div>
+
+</div>
+
+</body>
+</html>
